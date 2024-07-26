@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.base-button {
+  padding: 9px 17px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.Accueil {
+  font-family: 'KoHo', sans-serif;
+}
+
+/*Style spécifique pour la page d'accueil */
+.Accueil,
+.pdf,
+.excel,
+.csv {
+  font-size: 14px;
+  padding: 12px 18px;
+  font-weight: 500;
+  background: #010351;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2.5em;
+  cursor: pointer;
+}
+
+.transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: rgba(79, 216, 148, 1);
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Accueil:hover .transition {
+  width: 100%;
+  height: 100%;
+} 
+
+.Accueil:active {
+  transform: scale(0.97);
+} 
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.20em;
+}
+
+.label {
+  position: relative;
+  top: -1px;
+  margin-bottom: 0 !important;
+}
+
+
+/* Styles spécifiques pour le bouton login */
+.login {
+  --primary-color: #4FD894;
+  --secondary-color: #fff;
+  --hover-color: #010351;
+  --arrow-width: 11px;
+  --arrow-stroke: 2px;
+  border-radius: 24px;
+  background: var(--primary-color);
+  gap: 0.6em;
+  font-weight: bold;
+  padding: 0.9em 1.8em;
+}
+
+.login .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.3s;
+}
+
+.login .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.login:hover {
+  background-color: var(--hover-color);
+}
+
+.login:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.login:hover .arrow:before {
+  right: 0;
+}
+
+.pdf:hover svg,
+.excel:hover svg ,
+.csv:hover svg  {
+  transform: scale(1.25);
+  transition: 0.3s linear;
+}
+
+.pdf:hover svg,
+.excel:hover svg,
+.csv:hover svg  {
+  transform: translateX(1.2em) scale(1.1);
+  fill: #fff;
+}
+
+.pdf:hover .label,
+.excel:hover .label,
+.csv:hover .label {
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.pdf:active,
+.excel:active,
+.csv:active {
+  transform: scale(0.95);
+}
+
+
+.pdf,
+.excel,
+.csv {
+  font-weight: bold;
+}
+.pdf .label,
+.excel .label,
+.csv .label {
+  margin-left: 4px;
+}
+/* plus icon */
+.icon {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 17px;
+}
+
+.excel .icon svg {
+  width: 13px;
+}
+
+.icon svg path {
+  fill: white;
+}
+
+/* Styles spécifiques pour le button add*/
+.add {
+  /* border: 2px solid #010351; */
+ background-color: #010351;
+ border-radius: 0.9em;
+ padding: 9px 13px;
+ transition: all ease-in-out 0.2s;
+ font-size: 13px;
+}
+.add span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+ }
+
+ .add:hover {
+  background-color: #010331;
+ }
+ .primary {
+  background-color: #007BFF;
+}
+.primary:hover {
+  background-color: #0056B3;
+}
+
+.next {
+  background-color: seagreen;
+}
+
+.next:hover {
+  background-color: rgb(39, 112, 71);
+}
+
+.secondary {
+  background-color: #6C757D;
+}
+
+.secondary:hover {
+  background-color: #5A6268;
+}
+
+.danger {
+  background-color: #DC3545;
+}
+
+.danger:hover {
+  background-color: #C82333;
+}
+
+.base-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.payment{
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #4FD894;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.payment:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.payment:hover .icon {
+  transform: translate(4px);
+}
+
+.payment:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.payment::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+.space{
+  padding: 10px;
+}
+
+.icon2 {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.language-selection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+.language-selection button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.language-selection button img {
+  width: 30px; 
+  height: auto;
+}
+.button-image{
+  width: 30px; 
+  height: auto;
+}
+

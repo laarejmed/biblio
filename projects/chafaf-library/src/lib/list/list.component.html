@@ -1,0 +1,26 @@
+<header>
+  <nav>
+    <div class="logo-container">
+      <img [src]="logoUrl" alt="Logo Image" class="logo-img">
+      <div class="logo">{{ logoText }}</div>
+    </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+      <li *ngFor="let item of menuItems">
+        <a [href]="item.link">{{ item.label }}</a>
+        <ul *ngIf="item.subItems?.length" class="dropdown-menu">
+          <li *ngFor="let subItem of item.subItems">
+            <a [href]="subItem.link">{{ subItem.label }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="language-selection">
+      <button *ngFor="let flag of languageFlags" type="button" (click)="changeLanguage(flag.code)">
+        <img [src]="flag.url" [alt]="flag.code" />
+      </button>
+    </div>
+  </nav>
+</header>
+  

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.flex-column {
+  font-family: "Poppins", sans-serif;
+}
+  .inputForm {
+    border: 1.5px solid #ecedec;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%; 
+    max-width: 850px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transition: 0.2s ease-in-out;
+
+    background-color: #f0f0f0;
+    /* margin: 6px 0; */
+    height: 45px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 13% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+  }
+  
+  .input {
+    font-family: "Poppins", sans-serif;
+    background-color: #f0f0f0;
+    font-weight: 500;
+    font-size: 1rem;
+    /* margin-left: 10px; */
+    border-radius: 10px;
+    border: none;
+    width: 91%;
+    height: 95%;
+  }
+  
+  .input:focus {
+    outline: none;
+    color: #000;
+  }
+  
+  .inputForm:focus-within {
+    border: 1.5px solid #59dd9b;
+  } 
+
+  .inputForm svg {
+    fill: #010351;
+    margin-left: 10px;
+  }
+
+  .label {
+    margin-bottom: 10px;
+  }
+
+  /*------------------------------------------------------------------*/
+
+  .search {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    /* color: #646464; */
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 810px;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+  }
+  
+  .search__input:focus {
+    outline: none;
+    /* background-color: #f0eeee; */
+    border: 1px solid #010331;
+  }
+  
+  .search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+  }
+  
+  .search__input:focus + .search__button {
+    background-color: #f4f2f2;
+  }
+  
+  .search__button {
+    border: none;
+    /* background-color: #f4f2f2; */
+    margin-top: .1em;
+  }
+  
+  .search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+  } 
+
+  /*------------------------------------------------------------------*/
+
+  .inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0;
+    max-width: 850px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .inputGroup input,
+  .inputGroup textarea {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0.8em;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+    background-color: transparent;
+    padding: 0 0.5em;
+  }
+  
+  .inputGroup input:focus,
+  .inputGroup textarea:focus,
+  .inputGroup input:valid {
+    border-color: #010331;
+  }
+  
+  .inputGroup input:focus + label,
+  .inputGroup textarea:focus + label,
+  .inputGroup input:valid + label {
+    top: -0.6em; 
+    left: 0.8em;
+    transform: scale(0.9);
+    background-color: #fff;
+    padding: 0 0.2em; 
+  }
+
+  /*-----------------------------------------------*/
+  
+  input[type="password"], input[type="text"] {
+    padding-right: 30px;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .file-input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 55px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 16px;
+    transition: background-color 200ms;
+  }
+
+  input.file-input {
+    width: 400px;
+    border-radius: 55px;
+    background-color: #f0f0f0;
+  }
